@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using backend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend
 {
@@ -8,6 +9,10 @@ namespace backend
         {
 
         }
-
+        public DbSet<Reserva>Reservas { get; set; }
+        public DbSet<Horario>Horarios { get; set; }
+        public DbSet<Medico>Medicos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Pago> Pagos { get; set; }
     }
 }
