@@ -13,8 +13,7 @@ const medicosSlice = createSlice({
             state.status = "pending";
         });
         builder.addCase(CargarMedico.fulfilled, (state, action) => { //action.payload
-            state.auth=true;
-            state.user=action.payload
+            state.medicos=action.payload
             state.status = "success";
         });
         builder.addCase(CargarMedico.rejected, (state, action) => {
