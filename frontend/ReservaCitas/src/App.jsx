@@ -21,8 +21,9 @@ function App() {
     <>
     <Navbar/>
       <Routes>
-        <Route exact path='/' element={<SeleccionarReserva></SeleccionarReserva>}></Route>
+        <Route exact path='/' element={<Reservar></Reservar>}></Route>
         <Route path='/reserva'element={<Reservar></Reservar>}></Route>
+        <Route path='/selectReserva' element={<SeleccionarReserva></SeleccionarReserva>}></Route>
       </Routes>
     </>
   )
