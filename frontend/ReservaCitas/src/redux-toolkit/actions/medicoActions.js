@@ -4,7 +4,7 @@ import axios from "axios";
 export const CargarMedico= createAsyncThunk("/CargarMedico", async ()=>{
     try {
         const res=await axios.get("/Medicos");
-        return res;
+        return res.data;
     } catch (error) {
         return error
     }
