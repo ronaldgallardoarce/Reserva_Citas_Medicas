@@ -1,0 +1,29 @@
+.futuristic-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left h1, .footer-right h3 {
+  color: #fff;
+}
+
+.footer-left p {
+  color: #ccc;
+}
