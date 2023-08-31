@@ -24,15 +24,10 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path='/reserva'element={<Reservar></Reservar>}></Route>
+        <Route path='/selectReserva' element={<SeleccionarReserva></SeleccionarReserva>}></Route>
         <Route exact path="/" element={<ChatbotIntegration />} />
         <Route path="/chat" element={<ChatGPT />} />
-
-        <Route
-          exact
-          path="/"
-          element={<SeleccionarReserva></SeleccionarReserva>}
-        ></Route>
-        <Route path="/reserva" element={<Reservar></Reservar>}></Route>
       </Routes>
       <Footer /> {/* Aquí colocas el componente Footer como elemento */}
     </>

@@ -1,10 +1,50 @@
-
-.a{
-    background-color: aqua;
+:root {
+    --fc-today-bg-color: rgb(3, 162, 255); /* Establece el color de fondo del día actual */
+    --fc-border-color: none;
+  }
+.calendar{
+    text-transform: capitalize;
 }
-.b{
-    background-color: antiquewhite;
+.fc-daygrid-day,
+.fc-daygrid-day-frame {
+  border: none !important;
 }
-.c{
-    background-color: blue;
+.fc-scroller,
+.fc-col-header-cell {
+  border: none !important;
 }
+.fc-view {
+    border: none !important;
+    border-radius: 30px !important;
+  }
+  .fc-view,
+.fc-scroller,
+.fc-col-header-cell,
+.fc-daygrid-day,
+.fc-daygrid-day-frame,
+.fc td,
+.fc th {
+  border: none !important;
+}
+.fc-day{
+    border-radius: 50%;
+    color: rgb(166, 167, 170);
+}
+  .fc-daygrid-day-top{
+    color: rgb(3, 162, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+  }
+  .fc-daygrid-day.fc-day-today .fc-daygrid-day-top {
+    color: white; /* Establece el color del texto del número del día actual a blanco */
+  }
+  .fc-highlight{
+    border-radius: 50%;
+    background-color: rgb(184, 236, 247);
+  }
+  .fc-daygrid-day-top .fc-day-past {
+    color: red;
+    /* otros estilos personalizados */
+  }

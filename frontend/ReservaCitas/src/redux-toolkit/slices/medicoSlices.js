@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CargarMedico } from "../actions/medicoActions";
+import { CargarMedico, SelectMedico } from "../actions/medicoActions";
 
 const initialState ={
-    medicos:[]
+    medicos:[],
+    medico:{}
 };
 
 const medicosSlice = createSlice({
@@ -17,6 +18,17 @@ const medicosSlice = createSlice({
             state.status = "success";
         });
         builder.addCase(CargarMedico.rejected, (state, action) => {
+            state.status = "rejected";
+        });
+
+        builder.addCase(SelectMedico.pending, (state, action) => {
+            state.status = "pending";
+        });
+        builder.addCase(SelectMedico.fulfilled, (state, action) => { //action.payload
+            state.medico=action.payload
+            state.status = "success";
+        });
+        builder.addCase(SelectMedico.rejected, (state, action) => {
             state.status = "rejected";
         });
     }
