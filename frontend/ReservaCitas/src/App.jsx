@@ -5,20 +5,23 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './Components/navbar/navbar'
 import Reservar from './Components/Reserva/reserva'
+import SeleccionarReserva from './Components/Reserva/seleccionarReserva'
 import { CargarMedico } from './redux-toolkit/actions/medicoActions'
 
 function App() {
   const dispatch=useDispatch();
   const x= async()=>{
-    dispatch(CargarMedico());
+    console.log('app')
+    await dispatch(CargarMedico());
   }
   useEffect(()=>{
+    x();
   })
   return (
     <>
     <Navbar/>
       <Routes>
-        <Route exact path='/' element={<Reservar></Reservar>}></Route>
+        <Route exact path='/' element={<SeleccionarReserva></SeleccionarReserva>}></Route>
         <Route path='/reserva'element={<Reservar></Reservar>}></Route>
       </Routes>
     </>
