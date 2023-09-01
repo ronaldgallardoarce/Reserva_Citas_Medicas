@@ -10,14 +10,17 @@ import HomePage from "./Components/incio/HomePage";
 import ChatbotIntegration from "./Components/ChatbotIntegration/ChatbotIntegration";
 import ChatGPT from "./Components/ChatGPT/Chatgpt";
 import SeleccionarReserva from "./Components/Reserva/seleccionarReserva";
+import { CargarHorario } from "./redux-toolkit/actions/horarioActions";
+import { CargarUsuario } from "./redux-toolkit/actions/pacienteActions";
 function App() {
   const dispatch = useDispatch();
-  const x = async () => {
-    console.log("app");
+  const CargarEstados = async () => {
     await dispatch(CargarMedico());
+    await dispatch(CargarHorario());
+    await dispatch(CargarUsuario());
   };
   useEffect(() => {
-    x();
+    CargarEstados();
   }, [dispatch]);
 
   return (
