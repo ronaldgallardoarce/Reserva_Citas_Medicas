@@ -3,7 +3,7 @@ import './footer.css'; // Importa tu archivo de estilos CSS aquí
 
 function FuturisticFooter() {
   return (
-    <footer className="futuristic-footer">
+    <footer className="futuristic-footer mt-10">
       <div className="footer-content">
         <div className="footer-left">
           <h1>Prosalud 2.0</h1>

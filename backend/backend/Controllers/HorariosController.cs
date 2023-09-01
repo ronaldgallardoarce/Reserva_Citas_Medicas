@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend;
 using backend.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace backend.Controllers
 {
+    [EnableCors("cors")]
     [Route("api/[controller]")]
     [ApiController]
     public class HorariosController : ControllerBase

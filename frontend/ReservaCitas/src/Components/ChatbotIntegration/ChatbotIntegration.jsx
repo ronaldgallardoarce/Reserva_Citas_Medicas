@@ -1,4 +1,5 @@
 import React from 'react';
+import Reservar from '../Reserva/reserva';
 
 function ChatbotIntegration() {
   return (
@@ -11,6 +12,7 @@ function ChatbotIntegration() {
         frameBorder="0"
         allowFullScreen
       />
+      <Reservar></Reservar>
     </div>
   );
 }

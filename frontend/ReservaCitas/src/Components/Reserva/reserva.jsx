@@ -15,7 +15,8 @@ const Reservar = () => {
     return (
         <>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <h1 className="mb-6 text-xl font-medium text-gray-900 dark:text-white" >Medicos</h1>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
                 {
                     medicos.length > 0 ?
                         medicos.map((medico) => (

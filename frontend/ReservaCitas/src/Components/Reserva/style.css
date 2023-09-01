@@ -48,3 +48,14 @@
     color: red;
     /* otros estilos personalizados */
   }
+  .horas{
+    border-radius: 5px !important;
+    border-color: rgb(3, 162, 255) !important;
+    color: rgb(3, 162, 255) !important;
+    width: 250px !important;
+  }
+  .horas:hover{
+    border-color: rgb(3, 162, 255) !important;
+    background-color:rgb(3, 162, 255) !important ;
+    color: white !important;
+  }
